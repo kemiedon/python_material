@@ -15,17 +15,73 @@
 Python 也一樣：
 你不用寫 100 組學生成績，用一個 Student 類別就能一直生出學生物件。
 
+### 什麼是 OOP（物件導向程式設計）？
+
+OOP（Object-Oriented Programming） 是一種將程式設計「模組化」的方式，它模仿真實世界中的「物件」，讓我們可以更有結構、更好維護地開發大型程式。
+
+物件（Object）是類別（Class）的實例
+
+#### 物件導向的三個元素
+
+| 元素             | 說明                                           | Python 對應關鍵字或語法 |
+| ---------------- | ---------------------------------------------- | ----------------------- |
+| 物件（Object）   | 具體存在、可操作的程式實體                     | 通常指由類別產生的實例  |
+| 類別（Class）    | 定義一群物件的屬性與行為藍圖                   | class 類別名稱:         |
+| 實例（Instance） | 根據類別建立的具體物件，每個實例可有不同屬性值 | 實例 = 類別名稱(參數)   |
+| 方法（Method）   | 實例能執行的動作，定義在類別中                 | def 方法名稱(self):     |
+
+#### Python OOP 基本範例
+
+偽代碼示範:
+
+```
+類別：動物（Animal）
+    屬性：名字
+    方法：發出聲音
+
+類別：狗（Dog），繼承自動物
+    方法：發出聲音（覆寫）
+
+# 建立動物實例
+小動物 = 動物("小動物")
+柴犬 = 狗("柴犬")
+
+# 呼叫方法
+小動物.發出聲音()   # 小動物 發出聲音
+柴犬.發出聲音()     # 柴犬：汪汪！
+```
+
+真實程式:
+
+```python
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} 發出聲音")
+
+class Dog(Animal):
+    def speak(self):
+        print(f"{self.name}：汪汪！")
+
+a = Animal("小動物")
+d = Dog("柴犬")
+
+a.speak()   # 小動物 發出聲音
+d.speak()   # 柴犬：汪汪！
+```
+
 ### 程式範例
 
 #### 範例 1：student_example1.py
+
 #### 範例 2：student_example2.py
 
 ### 練習題
 
-- 建 Student 類別，三科成績與算平均的方法
-- 用 input() 建多位學生資料
-- 印出所有學生平均
-- 按平均分數做「排行榜」
+- 建立 Student 類別，包含三科成績與平均分數計算方法
+- 請設計一個「洗衣機(wash_machine)」類別，必須包含「品牌(brand)」和「容量(capacity)」兩個屬性
 
 ### 常見問題
 
@@ -59,6 +115,7 @@ Python 也一樣：
 ### 生活化範例
 
 銀行有：
+
 - 一般帳戶
 - 儲蓄帳戶
 - 支票帳戶
@@ -69,6 +126,7 @@ Python 也一樣：
 ### 程式範例
 
 #### 範例 1：account_example1.py
+
 #### 範例 2：account_example2.py
 
 ### 練習題
@@ -115,6 +173,7 @@ Python 也一樣：
 ### 程式範例
 
 #### 範例 1：module_example1.py
+
 #### 範例 2：module_example2.py
 
 ### 練習題
@@ -156,6 +215,7 @@ Python：我可以幫你自動分類。
 ### 程式範例
 
 #### 範例 1：builtin_module_example1.py
+
 #### 範例 2：builtin_module_example2.py
 
 ### 練習題
@@ -193,6 +253,7 @@ Python：我可以幫你自動分類。
 ### 程式範例
 
 #### 範例 1：decorator_example1.py
+
 #### 範例 2：decorator_example2.py
 
 ### 練習題
@@ -231,6 +292,7 @@ Python 可以幫你加總、排序，兩秒完成。
 ### 程式範例
 
 #### 範例 1：file_handling_example1.py
+
 #### 範例 2：file_handling_example2.py
 
 ### 練習題
@@ -271,6 +333,7 @@ CSV 不好查，但 SQL 超輕鬆。
 ### 程式範例
 
 #### 範例 1：sqlite_example1.py
+
 #### 範例 2：sqlite_example2.py
 
 ### 練習題
@@ -309,6 +372,7 @@ CSV 不好查，但 SQL 超輕鬆。
 ### 程式範例
 
 #### 範例 1：nosql_example1.py
+
 #### 範例 2：nosql_example2.py
 
 ### 練習題
@@ -335,6 +399,7 @@ CSV 不好查，但 SQL 超輕鬆。
 ### 專案目標
 
 整合學過的所有能力：
+
 - OOP
 - 模組化
 - SQL 操作
@@ -355,4 +420,3 @@ CSV 不好查，但 SQL 超輕鬆。
 - database.py（資料庫操作）
 - utils.py（工具函式）
 - main.py（主程式入口）
-
