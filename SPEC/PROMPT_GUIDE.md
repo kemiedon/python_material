@@ -59,7 +59,6 @@
 - 將「什麼是 OOP」和「物件導向的三個元素」表格移至生活化範例上方
 - 將原有生活化範例文字保留，放在「物件（Object）是類別（Class）的實例」下方
 
-## 教材整理 Prompt（已移至 `SPEC/MAIN.md`）
+## 教材整理 Prompt（已移動）
 
-此區塊已移動到 `SPEC/MAIN.md` 的「教材整理 Prompt」段落。若需修改教材整理規則，請在 `SPEC/MAIN.md` 編輯。
-
+教材整理相關的詳細規則已移至 `SPEC/MAIN.md`。若需修改教材整理規則，請在 `SPEC/MAIN.md` 編輯。
