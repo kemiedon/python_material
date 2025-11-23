@@ -128,48 +128,23 @@ d.speak()   # 柴犬：汪汪！
 **Q：物件跟變數差在哪？**
 → 物件有「資料 + 功能」。變數只有值。
 
-### AI 協助學習 Prompt
+#### 模組化實作練習：做三明治
 
-你可以使用以下 Prompt 來協助複習和練習：
+請依下列步驟完成一個「三明治製作」的模組化程式：
 
-- 請幫我解釋 self 在 Python 物件導向中的作用
-- 請給我一個簡單的 Student 類別範例
-- 請幫我檢查這個 Student 類別的程式碼是否有問題
-- 請幫我實作學生成績管理的類別
+1. 建立三個檔案：
 
----
+   - `bread.py`：定義切麵包的功能
+   - `lettuce.py`：定義準備生菜的功能
+   - `sandwich_main.py`：主程式，負責把所有材料組合成三明治並執行整合
 
-## 單元 2：OOP 進階（繼承、多型）
+2. 在 `sandwich_main.py` 中，使用 import 匯入 `bread.py` 和 `lettuce.py` 的功能。
 
-### 單元重點
+3. 請在 sandwich_main.py 中示範如何呼叫切麵包、準備生菜，並完成三明治的組合。
 
-- 一個類別可以「延伸」成另一個（繼承）
-- 相同方法名字，行為可以不同（多型）
-- 如何設計良好的類別階層
-- 何時使用繼承、何時使用組合
+4. 練習 `__name__ == "__main__"`，讓主程式能正確執行。
 
-### 生活化範例
-
-### 什麼是繼承?
-
-父類別（例如「學生」）就像是一個大分類，裡面定義所有孩子（子類別）都會有的共用屬性與方法。
-這樣子類別不用每次都重寫，只要繼承父類別即可。
-
-### 用「父類別」定義共用邏輯
-
-假設所有學生都會有姓名、年級和自我介紹功能，我們可以用「父類別 Student」來定義：
-
-```python
-class Student:
-    def __init__(self, name, grade):
-        self.name = name
-        self.grade = grade
-
-    def introduce(self):
-        print(f"大家好，我是{self.grade}年級的{self.name}。")
-```
-
-- 所有學生都能使用 introduce() 這個方法，不用每次重複設計。
+**請將程式碼分別放在 unit03_modularity 資料夾的三個檔案中，不需直接顯示於教材。**
 
 ---
 
@@ -372,8 +347,6 @@ show_introduction(john)   # Hello, my name is John. I am in grade 2.
 你家所有東西都塞同一個大箱子 → 亂得要死。
 模組化就是把東西分門別類。
 
----
-
 假設你要做一個「學生選課」小程式：
 
 把管理學生的功能放一個檔案：
@@ -402,23 +375,51 @@ from course import enroll
 # 主程式只負責整合功能
 ```
 
-這就像做三明治：
-有人切麵包，有人準備生菜，最後一個負責把料都夾在一起。
-
-學會這件事有什麼好處？
-不只讓你程式整理得很清楚，用久了，做什麼專案都像堆積木一樣，想要加東西、改東西就很方便。
-
-### 程式範例
-
-#### 範例 1：module_example1.py
-
-#### 範例 2：module_example2.py
+**模組化**不只讓程式管理清楚，讓做專案像堆積木一樣，想要加東西、改東西更加方便。
 
 ### 練習題
 
-- 把上週 OOP 專案拆成 account.py、utils.py、main.py
-- utils.py 寫格式化輸出
-- 練習 `__name__ == "__main__"`
+#### 模組化實作練習：做三明治
+
+請依下列步驟完成一個「三明治製作」的模組化程式：
+
+1. 建立三個檔案：
+
+   - `sandwich_student.py`：定義 Student 類別，負責「切麵包」
+   - `sandwich_course.py`：定義 enroll 函式，負責「準備生菜」
+   - `sandwich_main.py`：主程式，負責「把料都夾在一起」並執行整合
+
+2. 在 `sandwich_main.py` 中，使用 import 匯入 `sandwich_student.py` 和 `sandwich_course.py` 的功能。
+3. 請在 sandwich_main.py 中示範如何建立 Student 物件，並呼叫 enroll 函式完成三明治的組合。
+4. 練習 `__name__ == "__main__"`，讓主程式能正確執行。
+
+**期望檔案結構與範例程式碼：**
+
+```python
+# sandwich_student.py
+class Student:
+    def __init__(self, name):
+        self.name = name
+    def cut_bread(self):
+        print(f"{self.name} 切好麵包！")
+
+# sandwich_course.py
+def enroll():
+    print("生菜準備好！")
+
+# sandwich_main.py
+from sandwich_student import Student
+from sandwich_course import enroll
+
+def make_sandwich():
+    s = Student("小明")
+    s.cut_bread()
+    enroll()
+    print("三明治完成！")
+
+if __name__ == "__main__":
+    make_sandwich()
+```
 
 ### 常見問題
 
