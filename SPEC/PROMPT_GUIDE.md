@@ -71,3 +71,32 @@
   - exercise_solutions.py：練習題解答（Student 類別、WashingMachine 類別）
 - 更新 SPEC/MAIN.md 加入資料夾結構規範及說明資料夾命名使用英文
 - 標記單元 1 待辦事項為已完成
+
+### 第 9 個指令（Commit: 2025-11-23-10:35:51-1.7）
+
+- 用教材中 OOP 基本範例替換單元 1 程式檔案
+- 刪除 student_example1.py、student_example2.py
+- 新增 animal_example.py：Animal、Dog、Cat 類別展示繼承與多型
+
+### 第 10 個指令（Commit: 2025-11-23-10:41:22-1.8）
+
+- 統一所有單元的重點標題為「本單元重點」
+- 每個單元補充完整的重點內容列表
+
+### 第 11 個指令（Commit: 2025-11-23-10:42:08-1.9）
+
+- 將「本單元重點」改為「單元重點」（全部 8 個單元）
+
+### 第 12 個指令（Commit: 2025-11-23-11:18:56-2.0）
+
+- 將單元 1 的練習題排版格式統一為單元 2 的格式
+- 改為編號練習題（練習 1、練習 2）、難度標記（⭐、⭐⭐）
+- 加入任務說明、期望輸出範例
+
+### 第 13 個指令（Commit: 2025-11-23-XX:XX:XX-2.1）
+
+- 為單元 2 建立程式範例與練習題解答
+  - inheritance_example1.py：教材說明中的範例代碼（Student、ForeignStudent、多型示範）
+  - exercise_solutions.py：包含練習 1-4 的完整解答（4 個練習題）
+- 在 python_advanced/unit02_oop_advanced/ 資料夾中新增上述檔案
+- 所有程式碼已測試並正確執行
