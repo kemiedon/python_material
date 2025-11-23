@@ -77,8 +77,45 @@ d.speak()   # 柴犬：汪汪！
 
 ### 練習題
 
-- 建立 Student 類別，包含三科成績與平均分數計算方法
-- 請設計一個「洗衣機(wash_machine)」類別，必須包含「品牌(brand)」和「容量(capacity)」兩個屬性
+#### 練習 1：基礎類別設計（難度：⭐）
+
+建立一個 Student 類別來管理學生的成績資料。
+
+**任務：**
+
+```
+1. 建立一個名為 Student 的類別
+2. 屬性：三科成績（例如國文、英文、數學）
+3. 方法：計算平均分數的 average() 方法
+4. 建立一個學生實例，輸入成績並計算平均值
+```
+
+**期望輸出：**
+
+```
+學生成績：國文 85 分，英文 90 分，數學 88 分
+平均分數：87.67 分
+```
+
+#### 練習 2：類別屬性設計（難度：⭐⭐）
+
+設計一個「洗衣機」類別來表示不同的洗衣機型號。
+
+**任務：**
+
+```
+1. 建立一個名為 WashingMachine 的類別
+2. 屬性：brand（品牌）、capacity（容量，單位：公斤）
+3. 方法：display_info() 方法，顯示「品牌：XX，容量：XX 公斤」
+4. 建立兩個不同品牌的洗衣機實例並呼叫 display_info()
+```
+
+**期望輸出：**
+
+```
+品牌：LG，容量：8 公斤
+品牌：三星，容量：10 公斤
+```
 
 ### 常見問題
 
@@ -113,27 +150,181 @@ d.speak()   # 柴犬：汪汪！
 
 ### 生活化範例
 
-銀行有：
 
-- 一般帳戶
-- 儲蓄帳戶
-- 支票帳戶
+### 什麼是繼承?
 
-都可以查餘額，但是利息算法不一樣。
-這就是多型。
+父類別（例如「學生」）就像是一個大分類，裡面定義所有孩子（子類別）都會有的共用屬性與方法。
+這樣子類別不用每次都重寫，只要繼承父類別即可。
 
-### 程式範例
+### 用「父類別」定義共用邏輯
 
-#### 範例 1：account_example1.py
+假設所有學生都會有姓名、年級和自我介紹功能，我們可以用「父類別 Student」來定義：
 
-#### 範例 2：account_example2.py
+```python
+class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+
+    def introduce(self):
+        print(f"大家好，我是{self.grade}年級的{self.name}。")
+```
+
+- 所有學生都能使用 introduce() 這個方法，不用每次重複設計。
+
+---
+
+### 子類別覆寫父類別方法（method overriding）
+
+如果有外國學生，想要用英文自我介紹，可以設計一個子類別 ForeignStudent，覆寫 introduce() 方法：
+
+```python
+class ForeignStudent(Student):
+    def introduce(self):
+        print(f"Hello, my name is {self.name}. I am in grade {self.grade}.")
+```
+
+- 原本所有學生都是用中文介紹，外國學生則改用英文。
+
+---
+
+### 多型 (Polymorphism)-設計可擴充的程式架構
+
+多型（Polymorphism）是指：多個不同子類別可以用統一的方式被呼叫，程式不用管「具體是哪一種」，只要是同一個家族，就能順利執行相同的操作。
+
+我們可以設計一個統一的「自我介紹」流程，任何類型學生都可以用同一方法呼叫：
+
+```python
+def show_introduction(student):
+    student.introduce()
+
+ming = Student("小明", 3)
+john = ForeignStudent("John", 2)
+
+show_introduction(ming)   # 大家好，我是3年級的小明。
+show_introduction(john)   # Hello, my name is John. I am in grade 2.
+```
+
+- 無論新增什麼特殊學生類型，只需繼承自 Student 並定義 introduce() 方法即可自動適用。
+
+---
+
+父類別集中共用功能 → 子類別可依需要客製化 → 多型讓介面一致、擴充容易
 
 ### 練習題
 
-- 建 Account 基類別：存款、提款
-- 建 SavingAccount、CheckingAccount，寫自己的利息算法
-- 印出不同帳戶的利息
-- 進階：加手續費或自動扣款
+#### 練習 1：基礎父類別設計（難度：⭐）
+
+學校要管理學生資料，所有學生都有「姓名」和「學號」兩項基本資訊，以及「顯示基本資訊」的功能。
+
+**任務：**
+
+```
+1. 建立一個名為 Student 的父類別
+2. 屬性：name（姓名）、student_id（學號）
+3. 方法：show_info()，能夠印出「我是 [姓名]，學號是 [學號]」
+4. 建立兩個學生實例並呼叫 show_info() 方法
+```
+
+**期望輸出：**
+
+```
+我是小明，學號是 S001
+我是小花，學號是 S002
+
+```
+
+#### 練習 2：子類別覆寫方法（難度：⭐⭐）
+
+學校有不同科系的學生（例如資訊系、英文系），他們除了基本資訊外，還需要顯示自己的專長。
+
+**任務：**
+
+```
+1. 建立父類別 Student（含 name、student_id）
+2. 建立子類別 ComputerStudent（資訊系學生）
+   - 新增屬性：programming_language（程式語言）
+   - 覆寫 show_info() 方法：「我是 [姓名]，專長是 [程式語言]」
+3. 建立子類別 EnglishStudent（英文系學生）
+   - 新增屬性：language_level（英文程度）
+   - 覆寫 show_info() 方法：「我是 [姓名]，英文程度是 [程度]」
+4. 分別建立各科系學生實例並呼叫 show_info()
+
+```
+
+**期望輸出：**
+
+```
+我是小明，專長是 Python
+我是小花，英文程度是 Advanced
+```
+
+#### 練習 3：多型應用（難度：⭐⭐⭐）
+
+學校要開辦「學生成果分享會」，不同科系的學生用不同方式展示自己的成果。
+
+**任務：**
+
+```
+1. 建立父類別 Student（含 name）
+2. 建立子類別 ComputerStudent 和 EnglishStudent
+3. 在各子類別中實現 demonstrate()（展示）方法：
+   - ComputerStudent.demonstrate()：「[姓名]展示了一個 Python 程式」
+   - EnglishStudent.demonstrate()：「[姓名]朗讀了一篇英文文章」
+4. 建立一個函式 student_showcase(students_list)
+   - 接收一個學生清單
+   - 對每個學生呼叫 demonstrate() 方法（多型應用）
+5. 建立包含不同科系學生的清單，呼叫 student_showcase()
+
+
+```
+
+**期望輸出：**
+
+```
+小明展示了一個 Python 程式
+小花朗讀了一篇英文文章
+大衛展示了一個 Java 程式
+```
+
+#### 練習 綜合應用 - 課程管理系統（難度：⭐⭐⭐⭐）
+
+設計一個簡單的課程管理系統，讓不同科系學生可以註冊課程、查看成績。
+
+**任務：**
+
+```
+1. 建立父類別 Student
+   - 屬性：name、courses（已修課程清單，初始為空）
+   - 方法：enroll_course(course_name)（選課）
+   - 方法：get_courses()（查看課程）
+
+2. 建立子類別 ComputerStudent
+   - 覆寫 enroll_course()：只能選「資訊」相關課程
+   - 如選到不相關課程，提示「此課程不適合資訊系」
+
+3. 建立子類別 EnglishStudent
+   - 覆寫 enroll_course()：只能選「英文」相關課程
+   - 如選到不相關課程，提示「此課程不適合英文系」
+
+4. 實例操作：
+   - 建立小明（資訊系），選課「Python」（成功）和「莎士比亞」（失敗）
+   - 建立小花（英文系），選課「英文文學」（成功）和「資料結構」（失敗）
+   - 各自顯示已選課程
+```
+
+**期望輸出：**
+
+```
+小明選課 Python：成功！
+小明選課 莎士比亞：此課程不適合資訊系
+小明已修課程：['Python']
+
+小花選課 英文文學：成功！
+小花選課 資料結構：此課程不適合英文系
+小花已修課程：['英文文學']
+
+```
 
 ### 常見問題
 
