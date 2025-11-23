@@ -128,7 +128,7 @@ d.speak()   # 柴犬：汪汪！
 **Q：物件跟變數差在哪？**
 → 物件有「資料 + 功能」。變數只有值。
 
-#### 模組化實作練習：做三明治
+#### 模組化實作練習：做三明治（難度：⭐⭐）
 
 請依下列步驟完成一個「三明治製作」的模組化程式：
 
@@ -139,9 +139,7 @@ d.speak()   # 柴犬：汪汪！
    - `sandwich_main.py`：主程式，負責把所有材料組合成三明治並執行整合
 
 2. 在 `sandwich_main.py` 中，使用 import 匯入 `bread.py` 和 `lettuce.py` 的功能。
-
 3. 請在 sandwich_main.py 中示範如何呼叫切麵包、準備生菜，並完成三明治的組合。
-
 4. 練習 `__name__ == "__main__"`，讓主程式能正確執行。
 
 **請將程式碼分別放在 unit03_modularity 資料夾的三個檔案中，不需直接顯示於教材。**
@@ -261,7 +259,7 @@ show_introduction(john)   # Hello, my name is John. I am in grade 2.
 大衛展示了一個 Java 程式
 ```
 
-#### 練習 綜合應用 - 課程管理系統（難度：⭐⭐⭐⭐）
+#### 練習 4： 綜合應用 - 課程管理系統（難度：⭐⭐⭐⭐）
 
 設計一個簡單的課程管理系統，讓不同科系學生可以註冊課程、查看成績。
 
@@ -379,7 +377,7 @@ from course import enroll
 
 ### 練習題
 
-#### 模組化實作練習：做三明治
+##### 模組化實作練習：做三明治
 
 請依下列步驟完成一個「三明治製作」的模組化程式：
 
@@ -392,34 +390,6 @@ from course import enroll
 2. 在 `sandwich_main.py` 中，使用 import 匯入 `sandwich_student.py` 和 `sandwich_course.py` 的功能。
 3. 請在 sandwich_main.py 中示範如何建立 Student 物件，並呼叫 enroll 函式完成三明治的組合。
 4. 練習 `__name__ == "__main__"`，讓主程式能正確執行。
-
-**期望檔案結構與範例程式碼：**
-
-```python
-# sandwich_student.py
-class Student:
-    def __init__(self, name):
-        self.name = name
-    def cut_bread(self):
-        print(f"{self.name} 切好麵包！")
-
-# sandwich_course.py
-def enroll():
-    print("生菜準備好！")
-
-# sandwich_main.py
-from sandwich_student import Student
-from sandwich_course import enroll
-
-def make_sandwich():
-    s = Student("小明")
-    s.cut_bread()
-    enroll()
-    print("三明治完成！")
-
-if __name__ == "__main__":
-    make_sandwich()
-```
 
 ### 常見問題
 
