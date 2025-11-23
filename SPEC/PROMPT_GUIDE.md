@@ -58,3 +58,17 @@
 - 調整單元 1 的教材結構
 - 將「什麼是 OOP」和「物件導向的三個元素」表格移至生活化範例上方
 - 將原有生活化範例文字保留，放在「物件（Object）是類別（Class）的實例」下方
+
+### 第 8 個指令（Commit: 2025-11-23-10:29:04-1.5）
+
+- 在 `python_advanced/` 資料夾下建立 9 個單元的子資料夾（英文命名）
+  - unit01_oop_basics, unit02_oop_advanced, unit03_modularity, unit04_builtin_modules
+  - unit05_closure_decorator, unit06_file_data_processing, unit07_sql_database
+  - unit08_nosql_data, final_project
+- 為單元 1 新增程式範例與練習題解答
+  - student_example1.py：Student 類別基礎實作
+  - student_example2.py：使用多個物件和排序
+  - exercise_solutions.py：練習題解答（Student 類別、WashingMachine 類別）
+- 更新 SPEC/MAIN.md 加入資料夾結構規範及說明資料夾命名使用英文
+- 標記單元 1 待辦事項為已完成
+
