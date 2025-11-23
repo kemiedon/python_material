@@ -71,4 +71,3 @@
   - exercise_solutions.py：練習題解答（Student 類別、WashingMachine 類別）
 - 更新 SPEC/MAIN.md 加入資料夾結構規範及說明資料夾命名使用英文
 - 標記單元 1 待辦事項為已完成
-
