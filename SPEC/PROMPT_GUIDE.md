@@ -100,3 +100,52 @@
   - exercise_solutions.py：包含練習 1-4 的完整解答（4 個練習題）
 - 在 python_advanced/unit02_oop_advanced/ 資料夾中新增上述檔案
 - 所有程式碼已測試並正確執行
+
+### 第 14 個指令（Commit: 2025-11-23-11:25:00-2.2）
+
+- 重命名 `unit03_modularity/` 中的原始檔案：`bread.py` -> `exercise01_bread.py`、`lettuce.py` -> `exercise02_lettuce.py`、`sandwich_main.py` -> `exercise03_sandwich.py`，並在各檔加入 docstring 與封裝函式。
+
+### 第 15 個指令（Commit: 2025-11-23-11:27:12-2.3）
+
+- 刪除 `unit03_modularity/` 的舊 wrapper 檔案（`bread.py`、`lettuce.py`、`sandwich_main.py`）以及對應的 `__pycache__/` 目錄，清理命名與快取衝突。
+
+### 第 16 個指令（Commit: 2025-11-23-11:28:30-2.4）
+
+- 在 `exercise03_sandwich.py` 新增匯入相容性處理（try/except）以同時支援 package relative 與 top-level imports，避免 ModuleNotFoundError。
+
+### 第 17 個指令（Commit: 2025-11-23-11:30:05-2.5）
+
+- 新增 `python_advanced/unit03_modularity/README.md`，說明三個 exercise 的用途、執行方式與範例輸出。
+
+### 第 18 個指令（Commit: 2025-11-23-11:32:10-2.6）
+
+- 建立 `python_advanced/unit04_builtin_modules/`，並新增範例與練習檔：`exercise01_random.py`、`exercise02_math.py`、`exercise03_datetime.py`、`exercise04_filesystem.py`、`save_students.py`、`load_students.py` 等。
+
+### 第 19 個指令（Commit: 2025-11-23-11:34:20-2.7）
+
+- 更新教材與總覽文件：修改 `python_advanced.md`、`python_advanced/MAIN.md` 與 `SPEC/MAIN.md`，同步新檔名、單元說明與完成狀態（將單元 2/3/4 標為已完成）。
+
+### 第 20 個指令（Commit: 2025-11-23-11:36:45-2.8）
+
+- 執行並驗證範例：在專案根目錄執行 `exercise03_sandwich.make_sandwich()`、`python3 python_advanced/unit04_builtin_modules/exercise01_random.py`、`python3 python_advanced/unit04_builtin_modules/exercise03_datetime.py` 等，確認輸出與行為正常。
+
+### 第 21 個指令（Commit: 2025-11-23-11:38:00-2.9）
+
+- 把上述操作摘要附加回 `SPEC/PROMPT_GUIDE.md` 的「指令歷史」區塊，並更新 TODO 列表以供追蹤（包含將操作列為已完成項目）。
+
+### 單元 Commit 整理建議
+
+為了讓 Git 歷史清晰、容易回溯，建議將操作按單元或類型分組成多個 commit（或用一個合併 commit）：
+
+- **Unit 03（模組化）**：包含重命名檔案、相容性處理與 README，建議 commit 訊息：
+  - `2025-11-23-11:25-2.2[unit03: rename and refactor exercises]`
+- **Unit 04（內建模組）**：新增整個 unit 的範例與練習檔，建議 commit 訊息：
+  - `2025-11-23-11:32-2.6[unit04: add builtin module examples and exercises]`
+- **文件更新**：更新 `python_advanced.md`、`MAIN.md`、`SPEC/MAIN.md`，建議 commit 訊息：
+  - `2025-11-23-11:34-2.7[docs: update unit filenames and status]`
+- **執行驗證**：把驗證腳本的執行結果或測試檔（若有）一併 commit，建議 commit 訊息：
+  - `2025-11-23-11:36-2.8[test: run examples and verify outputs]`
+- **選項**：若希望保持單一乾淨 commit，可合併上述為一個合併 commit，例如：
+  - `2025-11-23-11:40-2.9[feat: unit03-04 refactor, docs update, verify]`
+
+以上為建議的 commit 拆分策略；如果你同意，我可以幫你執行 `git add` 與分別或合併的 `git commit`（請回覆要使用的策略：「分拆 commit」或「合併成一個 commit」）。
