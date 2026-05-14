@@ -8,8 +8,8 @@
 
 ### 為什麼要用物件導向?
 
-* 把複雜的程式拆成一個一個物件，較容易分工、維護和擴充，例如遊戲裡有「玩家」、「怪物」、「道具」等物件，各自負責自己的事情。
-* 修改時通常只改其中一個類別，不用把整支程式翻來翻去，所以程式更好讀、比較不容易改壞其他地方。
+- 把複雜的程式拆成一個一個物件，較容易分工、維護和擴充，例如遊戲裡有「玩家」、「怪物」、「道具」等物件，各自負責自己的事情。
+- 修改時通常只改其中一個類別，不用把整支程式翻來翻去，所以程式更好讀、比較不容易改壞其他地方。
 
 ### 類別和物件：動物種類 vs. 個別動物
 
@@ -67,7 +67,7 @@ a.speak()   # 小動物 發出聲音
 d.speak()   # 柴犬：汪汪！
 ```
 
-**範例檔案：** `unit01_oop_basics/animal_example.py`
+**範例檔案：** **<span style="color: brown;">unit01_oop_basics/animal_example.py</span>**
 
 ### 練習題
 
@@ -113,8 +113,8 @@ d.speak()   # 柴犬：汪汪！
 
 **練習檔案：**
 
-* `unit01_oop_basics/exercise01_student_grade.py`
-* `unit01_oop_basics/exercise02_washing_machine.py`
+- `unit01_oop_basics/exercise01_student_grade.py`
+- `unit01_oop_basics/exercise02_washing_machine.py`
 
 ### 封裝：動物自己管理身體狀態
 
@@ -193,7 +193,7 @@ print("\n")
 animals = [Dog(), Bird(), Fish()]
 
 for animal in animals:
-    animal.move()   
+    animal.move()
 # 同樣呼叫 move()，實際表現依物件類別而變
 
 # 輸出：
@@ -205,15 +205,15 @@ for animal in animals:
 
 ## 物件導向觀念對照表（以動物為例）
 
-| 觀念               | 簡單定義                                                     | 在動物世界的例子                                       | 在程式裡大概長什麼樣子                |
-| ------------------ | ------------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------- |
-| 類別 Class         | 一種「種類／設計圖」，定義這一類東西的共同特徵與能力。       | Animal、Dog、Cat 這些「動物種類」。                    | `class Animal { ... }`              |
-| 物件 Object        | 從類別生出來的「實體」，真的存在的一個個東西。               | 小黑（那一隻狗）、小花（那一隻貓）。                   | `dog1 = new Dog()`                  |
-| 屬性 Attribute     | 描述物件狀態的資料。                                         | 名字、顏色、年齡、體重。                               | `name`, `age`, `weight`         |
-| 方法 Method        | 物件可以做的動作或功能。                                     | 吃、睡、移動、叫（eat、sleep、move、bark）。           | `eat()`, `sleep()`, `move()`    |
-| 封裝 Encapsulation | 把資料和操作包在物件裡，外面不能直接亂改，只能透過方法存取。 | 不能直接改體重，只能餵食，體重由動物自己依吃多少變化。 | `private weight` 搭配 `eat(food)` |
-| 繼承 Inheritance   | 新類別沿用舊類別的屬性與方法，並能再加上自己的。             | Dog、Cat 從 Animal 繼承吃和睡，再各自加上 bark、meow。 | `class Dog extends Animal { ... }`  |
-| 多型 Polymorphism  | 同一個介面或方法名，不同類別可以有不同實作。                 | 都是 move()：狗用跑的、鳥用飛的、魚用游的。            | `animal.move()`                     |
+| 觀念               | 簡單定義                                                     | 在動物世界的例子                                       | 在程式裡大概長什麼樣子             |
+| ------------------ | ------------------------------------------------------------ | ------------------------------------------------------ | ---------------------------------- |
+| 類別 Class         | 一種「種類／設計圖」，定義這一類東西的共同特徵與能力。       | Animal、Dog、Cat 這些「動物種類」。                    | `class Animal { ... }`             |
+| 物件 Object        | 從類別生出來的「實體」，真的存在的一個個東西。               | 小黑（那一隻狗）、小花（那一隻貓）。                   | `dog1 = new Dog()`                 |
+| 屬性 Attribute     | 描述物件狀態的資料。                                         | 名字、顏色、年齡、體重。                               | `name`, `age`, `weight`            |
+| 方法 Method        | 物件可以做的動作或功能。                                     | 吃、睡、移動、叫（eat、sleep、move、bark）。           | `eat()`, `sleep()`, `move()`       |
+| 封裝 Encapsulation | 把資料和操作包在物件裡，外面不能直接亂改，只能透過方法存取。 | 不能直接改體重，只能餵食，體重由動物自己依吃多少變化。 | `private weight` 搭配 `eat(food)`  |
+| 繼承 Inheritance   | 新類別沿用舊類別的屬性與方法，並能再加上自己的。             | Dog、Cat 從 Animal 繼承吃和睡，再各自加上 bark、meow。 | `class Dog extends Animal { ... }` |
+| 多型 Polymorphism  | 同一個介面或方法名，不同類別可以有不同實作。                 | 都是 move()：狗用跑的、鳥用飛的、魚用游的。            | `animal.move()`                    |
 
 #### 練習 3： 綜合應用 - 課程管理系統
 
@@ -256,10 +256,10 @@ for animal in animals:
 
 **練習檔案：**
 
-* `unit01/exercise03_basic_parent_class.py`
-* `unit01/exercise04_method_overriding.py`
-* `unit01/exercise05_polymorphism.py`
-* `unit01/exercise06_course_management.py`
+- `unit01_oop_basics/exercise03_basic_parent_class.py`
+- `unit01_oop_basics/exercise04_method_overriding.py`
+- `unit01_oop_basics/exercise05_polymorphism.py`
+- `unit01_oop_basics/exercise06_course_management.py`
 
 ### 常見問題
 
@@ -306,8 +306,8 @@ for animal in animals:
 
 ### 為什麼要模組化?
 
-* **「重複使用」**：常用的功能（像是計算成績、處理檔案）寫成模組，以後別的專案也能直接 import 來用，不用重寫。
-* **「好維護」**：如果成績計算有 bug，只要改那個模組檔案，所有用到它的程式就一起變正確。
+- **「重複使用」**：常用的功能（像是計算成績、處理檔案）寫成模組，以後別的專案也能直接 import 來用，不用重寫。
+- **「好維護」**：如果成績計算有 bug，只要改那個模組檔案，所有用到它的程式就一起變正確。
 
 ### 模組和套件的差別?
 
@@ -326,6 +326,7 @@ for animal in animals:
    - `exercise01_bread.py`：實作 `cut_bread()`（切麵包）
    - `exercise02_lettuce.py`：實作 `prepare_lettuce()`（準備生菜）
    - `exercise03_sandwich.py`：主程式，匯入並呼叫前兩者以組合三明治
+
 2. 在 `exercise03_sandwich.py` 中示範如何呼叫上述函式並在最後印出 `三明治完成！`。
 3. 包含 `if __name__ == "__main__"`，以便直接執行測試。
 
@@ -333,9 +334,9 @@ for animal in animals:
 
 **練習檔案：**
 
-* `unit02_modularity/exercise01_bread.py`
-* `unit02_modularity/exercise02_lettuce.py`
-* `unit02_modularity/exercise03_sandwich.py`
+- `unit02_modularity/exercise01_bread.py`
+- `unit02_modularity/exercise02_lettuce.py`
+- `unit02_modularity/exercise03_sandwich.py`
 
 ### 常見問題
 
@@ -373,7 +374,7 @@ print(math.sqrt(16))  # 開根號，輸出 4.0
 print(math.pi)        # 圓周率
 ```
 
-**範例檔案：** `unit03_builtin_modules/example_math.py`
+**範例檔案：** **<span style="color: brown;">unit03_builtin_modules/example_math.py</span>**
 
 2. random
    隨機數（抽籤、選號碼）
@@ -384,7 +385,7 @@ print(random.randint(1, 10))   # 隨機整數 1~10
 print(random.choice(['A', 'B', 'C']))  # 隨機選一個
 ```
 
-**範例檔案：** `unit03_builtin_modules/example_random.py`
+**範例檔案：** **<span style="color: brown;">unit03_builtin_modules/example_random.py</span>**
 
 3. datetime
    處理時間與日期
@@ -396,7 +397,7 @@ print(now)  # 現在時間
 print(now.year, now.month, now.day)
 ```
 
-**範例檔案：** `unit03_builtin_modules/example_datetime.py`
+**範例檔案：** **<span style="color: brown;">unit03_builtin_modules/example_datetime.py</span>**
 
 4. os
    跟作業系統互動（像瀏覽檔案、建立資料夾）
@@ -407,7 +408,7 @@ print(os.listdir('.'))  # 列出目前資料夾的檔案
 os.mkdir('testdir')     # 建立資料夾
 ```
 
-**範例檔案：** `unit03_builtin_modules/example_os.py`
+**範例檔案：** **<span style="color: brown;">unit03_builtin_modules/example_os_pathlib.py</span>**
 
 5. sys
    取得 Python 系統與參數資訊
@@ -418,7 +419,7 @@ print(sys.version)  # Python 版本
 print(sys.argv)     # 執行程式時的參數清單
 ```
 
-**範例檔案：** `unit03_builtin_modules/example_sys.py`
+**範例檔案：** **<span style="color: brown;">unit03_builtin_modules/example_json_sys.py</span>**
 
 6. json
    讓你可以把字典等資料變成文字（序列化、一樣反過來也行）
@@ -432,7 +433,7 @@ data2 = json.loads(json_str)  # 變回原本資料型態
 print(data2)
 ```
 
-**範例檔案：** `unit03_builtin_modules/example_json.py`
+**範例檔案：** **<span style="color: brown;">unit03_builtin_modules/example_json_sys.py</span>**
 
 ### 練習題
 
@@ -453,7 +454,7 @@ print(data2)
 第二組： ['小美', 'Amy', '阿強']
 ```
 
-**範例檔案：** `unit03_builtin_modules/exercise01_random.py`
+**範例檔案：** **<span style="color: brown;">unit03_builtin_modules/exercise01_random.py</span>**
 
 ---
 
@@ -466,7 +467,7 @@ print(data2)
 
 期望示範：輸入 (3,4) 得到 5.0；輸入 90 度得到 sin≈1.0。
 
-**範例檔案：** `unit03_builtin_modules/exercise02_math.py`
+**範例檔案：** **<span style="color: brown;">unit03_builtin_modules/exercise02_math.py</span>**
 
 #### 練習 3：時間與檔名
 
@@ -482,7 +483,7 @@ print(data2)
 filename: report_20251123_143005.txt
 ```
 
-**範例檔案：** `unit03_builtin_modules/exercise03_datetime.py`
+**範例檔案：** **<span style="color: brown;">unit03_builtin_modules/exercise03_datetime.py</span>**
 
 #### 練習 4：檔案系統基本操作
 
@@ -492,7 +493,7 @@ filename: report_20251123_143005.txt
 - `ensure_dir(path)`：如果資料夾不存在就建立（使用 `os.makedirs` 或 `Path.mkdir(parents=True, exist_ok=True)`)。
 - `group_by_extension(path)`：把目錄下的檔案依副檔名分組並回傳字典（副檔名 -> 檔名清單）。
 
-**範例檔案：** `unit03_builtin_modules/exercise04_filesystem.py`
+**範例檔案：** **<span style="color: brown;">unit03_builtin_modules/exercise04_filesystem.py</span>**
 
 #### 練習 5：JSON 與系統參數
 
@@ -507,7 +508,7 @@ filename: report_20251123_143005.txt
 save_students.py students.json load_students.py students.json
 ```
 
-**範例檔案：** `unit03_builtin_modules/exercise05_load_students.py`
+**範例檔案：** **<span style="color: brown;">unit03_builtin_modules/exercise05_load_students.py</span>**
 
 ### AI 協助學習 Prompt
 
@@ -599,7 +600,7 @@ if __name__ == "__main__":
    bob()
 ```
 
-**範例檔案：** `unit04_closure_decorator/closure_example.py`
+**範例檔案：** **<span style="color: brown;">unit04_closure_decorator/closure_example.py</span>**
 
 下面範例是在示範「用裝飾器統一做登入驗證」，用來「幫函式加上一層登入檢查」的功能。
 
@@ -626,7 +627,7 @@ if __name__ == "__main__":
    access_system(None)
 ```
 
-**範例檔案：** `unit05_closure_decorator/require_login_example.py`
+**範例檔案：** **<span style="color: brown;">unit04_closure_decorator/require_login_example.py</span>**
 
 下列範例「帶參數的裝飾器」，用來檢查使用者是不是指定角色（例如 admin），不是的話就擋掉不讓執行。帶參數的裝飾器常用在權限控制、以角色為基礎的存取控制這類情境。
 
@@ -656,7 +657,7 @@ if __name__ == "__main__":
    delete_resource(guest)
 ```
 
-**範例檔案：** `unit05_closure_decorator/timeit_example.py`（時間裝飾器範例）
+**範例檔案：** **<span style="color: brown;">unit04_closure_decorator/timeit_example.py</span>**（時間裝飾器範例）
 
 ### 練習題
 
@@ -741,9 +742,11 @@ Python 提供了豐富的工具來處理各種格式的檔案和資料。
 1. **文字檔案**：筆記、日記、設定檔
 
    - 例如：儲存每日學習筆記、讀取設定檔
+
 2. **CSV 檔案**：表格資料（像 Excel）
 
    - 例如：學生名單、成績表、銷售記錄
+
 3. **JSON 檔案**：結構化資料（網站常用）
 
    - 例如：使用者資料、設定資料、API 回應
@@ -776,7 +779,7 @@ with open("diary.txt", "a", encoding="utf-8") as f:
     f.write("下午繼續練習！\n")
 ```
 
-**範例檔案：** `unit05_file_data_processing/example01_basic_file.py`
+**範例檔案：** **<span style="color: brown;">unit05_file_data_processing/example01_basic_file.py</span>**
 
 ### CSV 檔案處理
 
@@ -823,7 +826,7 @@ with open("students.csv", "r", encoding="utf-8-sig") as f:
         print(f"{row['姓名']}：國文 {row['國文']}，英文 {row['英文']}")
 ```
 
-**範例檔案：** `unit05_file_data_processing/example02_csv_operations.py`
+**範例檔案：** **<span style="color: brown;">unit05_file_data_processing/example02_csv_operations.py</span>**
 
 ### JSON 處理
 
@@ -884,7 +887,7 @@ for student in students:
     print(f"{student['name']} ({student['age']} 歲)")
 ```
 
-**範例檔案：** `unit05_file_data_processing/example03_json_operations.py`
+**範例檔案：** **<span style="color: brown;">unit05_file_data_processing/example03_json_operations.py</span>**
 
 ### 錯誤處理（try-except）
 
@@ -936,11 +939,11 @@ finally:
 - `ValueError`：資料格式轉換錯誤
 - `finally`：無論如何都會執行（用於清理資源）
 
-**範例檔案：** `unit05_file_data_processing/example04_error_handling.py`
+**範例檔案：** **<span style="color: brown;">unit05_file_data_processing/example04_error_handling.py</span>**
 
 ### 資料驗證與清理
 
-資料驗證是在「資料進來的當下」檢查：有沒有填、格式對不對、範圍合不合理，例如年齡必須在 0～120、學生年級只能是 1–3 年級、Email 一定要有 @。
+資料驗證是在「資料進來的當下」檢查：有沒有填、格式對不對、範圍合不合理，例如年齡必須在 0 ～ 120、學生年級只能是 1–3 年級、Email 一定要有 @。
 資料清理是在「資料已經收集完之後」再回頭整理，找出錯誤、缺失或不一致的地方，並做修正或刪除。
 
 處理真實資料時，經常會遇到「髒資料」，例如：
@@ -1018,7 +1021,7 @@ def clean_student_data(input_file, output_file):
         writer.writerows(clean_rows)
 ```
 
-**範例檔案：** `unit05_file_data_processing/example05_data_cleaning.py`
+**範例檔案：** **<span style="color: brown;">unit05_file_data_processing/example05_data_cleaning.py</span>**
 
 ### 練習題
 
@@ -1041,7 +1044,7 @@ read_diary("my_diary.txt")
 # 晚上繼續練習
 ```
 
-**練習檔案：** `unit05_file_data_processing/exercise01_read_write.py`
+**練習檔案：** **<span style="color: brown;">unit05_file_data_processing/exercise01_read_write.py</span>**
 
 #### 練習 2：處理 CSV 成績資料
 
@@ -1061,7 +1064,7 @@ read_diary("my_diary.txt")
 第 3 名：小明 （87.67 分）
 ```
 
-**練習檔案：** `unit05_file_data_processing/exercise02_csv_grade.py`
+**練習檔案：** **<span style="color: brown;">unit05_file_data_processing/exercise02_csv_grade.py</span>**
 
 #### 練習 3：JSON 資料備份與還原
 
@@ -1076,7 +1079,7 @@ read_diary("my_diary.txt")
 
 程式意外關閉或資料遺失時，可以從 JSON 備份檔快速還原。
 
-**練習檔案：** `unit05_file_data_processing/exercise03_json_backup.py`
+**練習檔案：** **<span style="color: brown;">unit05_file_data_processing/exercise03_json_backup.py</span>**
 
 #### 練習 4：資料驗證與錯誤處理
 
@@ -1104,7 +1107,7 @@ read_diary("my_diary.txt")
     - 成績 150 超出範圍
 ```
 
-**練習檔案：** `unit05_file_data_processing/exercise04_data_validation.py`
+**練習檔案：** **<span style="color: brown;">unit05_file_data_processing/exercise04_data_validation.py</span>**
 
 #### 練習 5：綜合應用 - 學生成績管理系統
 
@@ -1133,7 +1136,7 @@ system.backup_to_json()
 system.export_to_csv("report.csv")
 ```
 
-**練習檔案：** `unit05_file_data_processing/exercise05_integrated_system.py`
+**練習檔案：** **<span style="color: brown;">unit05_file_data_processing/exercise05_integrated_system.py</span>**
 
 ### 常見問題
 
@@ -1345,7 +1348,7 @@ select_all_students(conn)
 conn.close()
 ```
 
-**範例檔案：** `unit06_sql_database/example01_basic_sqlite.py`
+**範例檔案：** **<span style="color: brown;">unit06_sql_database/example01_basic_sqlite.py</span>**
 
 #### 範例 2：CRUD 操作（類別封裝）
 
@@ -1455,7 +1458,7 @@ class StudentDatabase:
         self.conn.close()
 ```
 
-**範例檔案：** `unit06_sql_database/example02_crud_operations.py`
+**範例檔案：** **<span style="color: brown;">unit06_sql_database/example02_crud_operations.py</span>**
 
 #### 範例 3：SQL 查詢範例
 
@@ -1546,7 +1549,7 @@ for row in cursor.fetchall():
 conn.close()
 ```
 
-**範例檔案：** `unit06_sql_database/example03_query_examples.py`
+**範例檔案：** **<span style="color: brown;">unit06_sql_database/example03_query_examples.py</span>**
 
 #### 範例 4：多表 JOIN 查詢
 
@@ -1665,7 +1668,7 @@ for row in cursor.fetchall():
 conn.close()
 ```
 
-**範例檔案：** `unit06_sql_database/example04_join_tables.py`
+**範例檔案：** **<span style="color: brown;">unit06_sql_database/example04_join_tables.py</span>**
 
 #### 範例 5：交易處理（Transaction）
 
@@ -1776,7 +1779,7 @@ for row in cursor.fetchall():
 conn.close()
 ```
 
-**範例檔案：** `unit06_sql_database/example05_transaction.py`
+**範例檔案：** **<span style="color: brown;">unit06_sql_database/example05_transaction.py</span>**
 
 ### 練習題
 
@@ -1791,7 +1794,7 @@ conn.close()
 3. 插入至少 5 筆課程資料
 4. 查詢並顯示所有課程
 
-**練習檔案：** `unit06_sql_database/exercise01_create_database.py`
+**練習檔案：** **<span style="color: brown;">unit06_sql_database/exercise01_create_database.py</span>**
 
 #### 練習 2：查詢練習
 
@@ -1809,7 +1812,7 @@ conn.close()
    - 計算平均價格
    - 找出庫存不足（< 10）的產品
 
-**練習檔案：** `unit06_sql_database/exercise02_query_practice.py`
+**練習檔案：** **<span style="color: brown;">unit06_sql_database/exercise02_query_practice.py</span>**
 
 #### 練習 3：成績統計系統
 
@@ -1826,7 +1829,7 @@ conn.close()
    - 找出每個科目的最高分學生
    - 列出不及格（< 60）的成績記錄
 
-**練習檔案：** `unit06_sql_database/exercise03_grade_statistics.py`
+**練習檔案：** **<span style="color: brown;">unit06_sql_database/exercise03_grade_statistics.py</span>**
 
 #### 練習 4：圖書館借閱系統
 
@@ -1845,7 +1848,7 @@ conn.close()
    - 統計熱門書籍
 3. 使用交易處理確保資料一致性
 
-**練習檔案：** `unit06_sql_database/exercise04_library_system.py`
+**練習檔案：** **<span style="color: brown;">unit06_sql_database/exercise04_library_system.py</span>**
 
 ### 重點觀念整理
 
@@ -2054,7 +2057,7 @@ print("✓ 已刪除書籍")
 db.close()
 ```
 
-**範例檔案：** `unit07_nosql_data/example01_tinydb_basic.py`
+**範例檔案：** **<span style="color: brown;">unit07_nosql_data/example01_tinydb_basic.py</span>**
 
 #### 範例 2：TinyDB 進階查詢電影資料庫
 
@@ -2135,7 +2138,7 @@ print(f"\n平均評分: {avg_rating:.2f}")
 db.close()
 ```
 
-**範例檔案：** `unit07_nosql_data/example02_tinydb_query.py`
+**範例檔案：** **<span style="color: brown;">unit07_nosql_data/example02_tinydb_query.py</span>**
 
 ### 練習題
 
@@ -2157,7 +2160,7 @@ db.close()
    - 標記為完成
    - 刪除待辦事項
 
-**練習檔案：** `unit07_nosql_data/exercise01_tinydb_todo.py`
+**練習檔案：** **<span style="color: brown;">unit07_nosql_data/exercise01_tinydb_todo.py</span>**
 
 ### 常見問題
 
@@ -2190,8 +2193,8 @@ db.close()
 
 ### SQL vs NoSQL 選擇指南
 
-| 特性               | SQL（關聯式）      | NoSQL（文件式）    |
-| ------------------ | ------------------ | ------------------ |
+| 特性         | SQL（關聯式）      | NoSQL（文件式）    |
+| ------------ | ------------------ | ------------------ |
 | **資料結構** | 固定欄位、表格式   | 彈性、類似 JSON    |
 | **查詢能力** | 強大（JOIN、統計） | 基礎查詢           |
 | **交易處理** | 支援 ACID          | 通常不支援         |
