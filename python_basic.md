@@ -173,7 +173,7 @@ conda env create -f environment.yml
 | **`__double_leading_underscore`**      | 內部變數名稱混淆，避免與子類別衝突（名稱改寫）         | `__mangled_variable`                          |
 | **`__double_underscore__`** （dunder） | 內建特殊方法與屬性                                     | `__init__`、`__str__`、`__len__`              |
 
-**`<font style='color: brown;'>`範例檔參考: examples/02-1_variables_naming.py `</font>`**
+**<span style="color: brown;">範例檔參考: examples/02-1_variables_naming.py</span>**
 
 ### 基本資料型別
 
@@ -200,7 +200,7 @@ is_student = True # bool
 - 字串必須用 ' 或 " 包起來。
 - 布林值是 True 和 False（首字母需大寫)
 
-**`<font style='color: brown;'>`範例檔參考: examples/02-2_data_types.py `</font>`**
+**<span style="color: brown;">範例檔參考: examples/02-2_data_types.py</span>**
 
 ### 數值運算處理
 
@@ -258,11 +258,11 @@ print(f"6. 取餘數 (a % b): {a % b}")
 print(f"7. 次方 (b ** 3): {b ** 3}")
 ```
 
-**`<font style='color: brown;'>`範例檔參考: examples/02-3_operations.py `</font>`**
+**<span style="color: brown;">範例檔參考: examples/02-3_operations.py</span>**
 
 ### 隨堂練習
 
-`<font style='color: darkblue;'>`開啟 cost_exercise.py，完成下列練習題 `</font>`
+<span style="color: darkblue;">開啟 cost_exercise.py，完成下列練習題</span>
 :::info
 
 #### 1. 計算與型別：
@@ -280,8 +280,8 @@ print(f"7. 次方 (b ** 3): {b ** 3}")
 
 :::
 
-**`<font style='color: brown;'>`範例檔參考: demo/cost_example.py `</font>`**
-**`<font style='color: darkblue;'>`練習檔參考: practice/cost_exercise.py `</font>`**
+**<span style="color: brown;">範例檔參考: demo/cost_example.py</span>**
+**<span style="color: darkblue;">練習檔參考: practice/cost_exercise.py</span>**
 
 ---
 
@@ -352,7 +352,7 @@ total_price = f"總價是 {price * quantity} 元" # 直接在 {} 中進行運算
 print(f"在 f-string 中運算: {total_price}")
 ```
 
-**`<font style='color: brown;'>`範例檔參考: examples/02-4_type_conversion_precedence.py `</font>`**
+**<span style="color: brown;">範例檔參考: examples/02-4_type_conversion_precedence.py</span>**
 
 ### 3. 使用 print 輸出訊息
 
@@ -392,7 +392,7 @@ print(f"x + y 的結果是：{result}")
 
 先讓使用者輸入，再用 int() 轉成整數。
 
-**`<font style='color: brown;'>`範例檔參考: examples/02-4_type_conversion_precedence.py `</font>`**
+**<span style="color: brown;">範例檔參考: examples/02-4_type_conversion_precedence.py</span>**
 
 ---
 
@@ -505,11 +505,11 @@ else:
 
 比較與邏輯運算子與 if 經常搭配使用，常用於組合多個條件來進行複雜的決策，例如：年齡與收入門檻 (age >= 18 and income >= 30000)。
 
-**`<font style='color: brown;'>`範例檔參考: examples/03_conditional_statements.py `</font>`**
+**<span style="color: brown;">範例檔參考: examples/03_conditional_statements.py</span>**
 
 ### 隨堂練習
 
-**`<font style='color: darkblue;'>`練習檔參考: practice/string_slicing_practice.py `</font>`**
+**<span style="color: darkblue;">練習檔參考: practice/string_slicing_practice.py</span>**
 
 ---
 
@@ -544,8 +544,8 @@ else:
 如果月份不在 1 到 12 的範圍內，印出 "月份輸入錯誤。"
 :::
 
-**`<font style='color: brown;'>`範例檔參考: demo/if_else_example.py `</font>`**
-**`<font style='color: darkblue;'>`練習檔參考: practice/if_exercise.py `</font>`**
+**<span style="color: brown;">範例檔參考: demo/if_else_example.py</span>**
+**<span style="color: darkblue;">練習檔參考: practice/if_exercise.py</span>**
 
 ### for 迴圈
 
@@ -657,7 +657,7 @@ for fruit in fruits:
 
 ```
 
-**`<font style='color: brown;'>`範例檔參考: examples/03_for_loops.py `</font>`**
+**<span style="color: brown;">範例檔參考: examples/03_for_loops.py</span>**
 
 ### 搭配 break 和 continue 流程控制
 
@@ -696,7 +696,7 @@ for num in numbers:
     print(f"    奇數是: {num}")
 ```
 
-`<font style='color: brown;'>`**範例檔參考: examples/03_while_loops.py** `</font>`
+**<span style="color: brown;">範例檔參考: examples/03_while_loops.py</span>**
 
 #### 應用情境
 
@@ -706,14 +706,14 @@ for num in numbers:
 清潔資料： 在處理客戶名單時，如果某個客戶的電話號碼欄位是空的，就跳過此客戶的簡訊發送步驟，直接處理下一個客戶。
 遊戲計分： 遍歷遊戲紀錄時，如果玩家的分數是零，就跳過計算該玩家的經驗值。
 
-`<font style='color: darkblue;'>`**課堂練習參考: practice/for_loop_exercise.py**`</font>`
-`<font style='color: darkblue;'>`\***\*課堂練習參考: practice/while_loop_exercise.py\*\*** `</font>`
+**<span style="color: darkblue;">課堂練習參考: practice/for_loop_exercise.py</span>**
+**<span style="color: darkblue;">課堂練習參考: practice/while_loop_exercise.py</span>**
 
 ---
 
 ### 回家小作業 1
 
-`<font style="color: darkblue;">`在 homework 資料夾中, 完成下列練習題`</font>`
+<span style="color: darkblue;">在 homework 資料夾中, 完成下列練習題</span>
 
 #### 練習題 1：簡易運算
 
@@ -743,7 +743,7 @@ for num in numbers:
 
 檔名: `exercise_7_nested_loops.py`
 
-**`<font style='color: darkblue;'>`作業檔參考: homework/`</font>`**
+**<span style="color: darkblue;">作業檔參考: homework/</span>**
 
 ---
 
@@ -826,8 +826,8 @@ root.mainloop()
 
 ![14_使用tkinter標準流程_infographic](https://hackmd.io/_uploads/H1Zs20cLbx.jpg)
 
-`<font style='color: brown;'>`**範例檔參考: examples/04_Tkinter01.py** `</font>`
-`<font style='color: brown;'>`**範例檔參考: examples/04_Tkinter02_grid.py** `</font>`
+**<span style="color: brown;">範例檔參考: examples/04_Tkinter01.py</span>**
+**<span style="color: brown;">範例檔參考: examples/04_Tkinter02_grid.py</span>**
 
 ---
 
@@ -877,7 +877,7 @@ except Exception as e:
 
 ```
 
-**`<font style='color: brown;'>`範例檔參考: examples/05_error_exception.py `</font>`**
+**<span style="color: brown;">範例檔參考: examples/05_error_exception.py</span>**
 
 `try`: 嘗試執行一段可能出錯的程式
 
@@ -947,7 +947,7 @@ print(s[::2])  # pto
 
 ```
 
-**`<font style='color: brown;'>`範例檔參考: demo/string_example.py `</font>`**
+**<span style="color: brown;">範例檔參考: demo/string_example.py</span>**
 
 :::warning
 📘 技巧重點：
@@ -967,7 +967,7 @@ print(repeat)    # Hi! Hi! Hi!
 
 ```
 
-**`<font style='color: brown;'>`範例檔參考: demo/string_example.py `</font>`**
+**<span style="color: brown;">範例檔參考: demo/string_example.py</span>**
 
 :::warning
 📘 技巧重點：
@@ -977,7 +977,7 @@ print(repeat)    # Hi! Hi! Hi!
 
 #### 隨堂練習
 
-`<font style="color: darkblue;">`在 practice/string_slicing_practice.py, 完成下列練習題`</font>`
+<span style="color: darkblue;">在 practice/string_slicing_practice.py, 完成下列練習題</span>
 
 ---
 
@@ -995,7 +995,7 @@ print(repeat)    # Hi! Hi! Hi!
 
 ---
 
-**`<font style='color: darkblue;'>`練習檔參考: practice/string_exercise.py `</font>`**
+**<span style="color: darkblue;">練習檔參考: practice/string_exercise.py</span>**
 
 :::info
 
@@ -1029,7 +1029,7 @@ sentence = "Python is a versatile and powerful programming language."
 
 #### 4. 使用 print() 印出完整的姓名，格式為 "Hello, [名字] [姓氏]!"。
 
-\*\*`<font style='color: brown;'>`範例檔參考: demo/string_example.py `</font>`
+**<span style="color: brown;">範例檔參考: demo/string_example.py</span>**
 :::
 
 ---
@@ -1054,7 +1054,7 @@ sentence = "Python is a versatile and powerful programming language."
 串列（List）是 Python 最常用的資料結構之一，就像一個可以放任意元素的「籃子」。它可以存放多個資料（整數、字串、甚至其他串列），並且可以隨意存取、修改、刪除裡面的元素。
 ![04_為何要使用串列List_infographic](https://hackmd.io/_uploads/HJ7i0xc8We.jpg)
 
-**`<font style='color: brown;'>`範例檔參考: examples/07_lists.py `</font>`**
+**<span style="color: brown;">範例檔參考: examples/07_lists.py</span>**
 
 **基本特性**
 
@@ -1126,7 +1126,7 @@ fruits.sort()
 fruits.reverse()
 ```
 
-**`<font style='color: brown;'>`範例檔參考: examples/05_lists.py `</font>`**
+**<span style="color: brown;">範例檔參考: examples/05_lists.py</span>**
 
 ### 串列拷貝
 
@@ -1167,7 +1167,7 @@ print(fruits.index("banana"))
 
 #### 練習題 9：字串方法練習
 
-**`<font style='color: darkblue;'>`開啟以下檔案練習: homework/exercise_9_string_methods_exercise.py `</font>`**
+**<span style="color: darkblue;">開啟以下檔案練習: homework/exercise_9_string_methods_exercise.py</span>**
 :::
 
 ## 7. 元組、字典與集合
@@ -1324,7 +1324,7 @@ def add(x, y):
 result = add(3, 7)  # result 得到 10
 ```
 
-\*\*`<font style='color: brown;'>`範例檔參考: examples/10_functions.py `</font>`
+**<span style="color: brown;">範例檔參考: examples/10_functions.py</span>**
 
 #### 4. 什麼是變數作用域
 
@@ -1400,7 +1400,7 @@ nums = [1, 2, 3, 4]
 result = list(map(lambda x: x * 2, nums))  # [2, 4, 6, 8]
 ```
 
-**`<font style='color: brown;'>`範例檔參考: examples/10_functions.py `</font>`**
+**<span style="color: brown;">範例檔參考: examples/10_functions.py</span>**
 
 ### 常用函式庫
 
@@ -1509,7 +1509,7 @@ os.system('echo Hello World')  # 執行系統指令（顯示 Hello World）
 
 ```
 
-**`<font style='color: brown;'>`範例檔參考: examples/11_common_libraries.py `</font>`**
+**<span style="color: brown;">範例檔參考: examples/11_common_libraries.py</span>**
 
 #### 6. json 模組
 
@@ -1530,8 +1530,8 @@ print(json_string)
 print("-" * 20)
 ```
 
-**`<font style='color: brown;'>`範例檔參考: examples/11_common_libraries.py `</font>`**
-**`<font style='color: darkblue;'>`練習檔參考: examples/practice_11_common_libraries.py `</font>`**
+**<span style="color: brown;">範例檔參考: examples/11_common_libraries.py</span>**
+**<span style="color: darkblue;">練習檔參考: examples/practice_11_common_libraries.py</span>**
 
 ### 隨堂練習
 
@@ -1552,7 +1552,7 @@ print("-" * 20)
 - 可以額外使用 datetime 模組，在訊息中加入今天的日期。
 - 可將輸入處理、訊息格式化、畫面輸出拆成不同函式，練習用函式來組織程式碼。
 
-**`<font style='color: darkblue;'>`開啟以下檔案練習: homework/exercise_10_lucky_number_logger.py `</font>`**
+**<span style="color: darkblue;">開啟以下檔案練習: homework/exercise_10_lucky_number_logger.py</span>**
 
 ---
 

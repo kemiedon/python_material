@@ -1,7 +1,7 @@
 # Python 教學教材專案
 
 > 資展國際 2026 年度 Python 課程教材
-> 
+>
 > 包含 Python 基礎與進階課程的完整教材、範例程式碼與練習題
 
 ## 📚 專案概覽
@@ -55,11 +55,13 @@ python_material/                # 主專案目錄
 #### 課程主題
 
 1. **環境設定**
+
    - Anaconda 安裝與配置
    - conda vs pip 套件管理
    - VS Code 開發環境設定
 
 2. **變數、資料型別、字串組合與運算**
+
    - 變數命名規範（PEP 8）
    - 基本資料型別（int, float, str, bool）
    - 算術與邏輯運算
@@ -67,26 +69,31 @@ python_material/                # 主專案目錄
    - 容器資料型別（list, tuple, dict, set）
 
 3. **程式設計基礎流程與結構**
+
    - 條件判斷（if/elif/else）
    - 迴圈（for/while）
    - 流程控制（break/continue）
 
 4. **視窗程式設計入門（Tkinter GUI）**
+
    - 基本視窗建立
    - 常用元件（Label, Button, Entry）
    - 事件處理
 
 5. **錯誤處理**
+
    - 常見錯誤類型
    - try-except 使用
    - 除錯技巧
 
 6. **字串與串列操作**
+
    - 字串索引與切片
    - 字串常用方法
    - 串列操作技巧
 
 7. **元組、字典與集合**
+
    - 資料結構特性與應用
    - 資料結構轉換
 
@@ -147,6 +154,7 @@ python_basic/
 ```
 
 **檔案編號規則**：
+
 - `00-01` 系列：入門與基礎語法
 - `02` 系列：變數、型別與運算
 - `03` 系列：流程控制
@@ -163,17 +171,20 @@ python_basic/
 #### 課程主題
 
 1. **物件導向程式設計基礎 (unit01_oop_basics)**
+
    - 類別與物件
    - 繼承與多型
    - 封裝
    - 練習：學生成績系統、洗衣機模擬、課程管理系統
 
 2. **模組化設計 (unit02_modularity)**
+
    - 模組導入與使用
    - 套件結構
    - 練習：三明治製作系統
 
 3. **內建模組應用 (unit03_builtin_modules)**
+
    - datetime：日期時間處理
    - json, sys：系統與資料交換
    - math：數學運算
@@ -181,11 +192,13 @@ python_basic/
    - random：隨機數生成
 
 4. **閉包與裝飾器 (unit04_closure_decorator)**
+
    - 閉包概念與應用
    - 裝飾器設計模式
    - 實用裝飾器：登入驗證、執行時間測量
 
 5. **檔案與資料處理 (unit05_file_data_processing)**
+
    - 檔案讀寫操作
    - CSV 資料處理
    - JSON 資料操作
@@ -193,6 +206,7 @@ python_basic/
    - 練習：成績管理、資料備份、整合系統
 
 6. **SQL 資料庫 (unit06_sql_database)**
+
    - SQLite 基礎操作
    - CRUD 操作（Create, Read, Update, Delete）
    - 查詢語法
@@ -201,6 +215,7 @@ python_basic/
    - 練習：資料庫建立、成績統計、圖書館系統
 
 7. **NoSQL 資料處理 (unit07_nosql_data)**
+
    - TinyDB 基礎
    - 查詢操作
    - 練習：待辦事項系統
@@ -214,6 +229,7 @@ python_basic/
 #### 單元結構
 
 每個單元包含：
+
 - `example*.py`：範例程式碼（漸進式教學）
 - `exercise*.py`：練習題目
 - `README.md`：單元說明文件（部分單元）
@@ -284,11 +300,13 @@ pip install tinydb
 ### 教師使用
 
 1. **課程準備**
+
    - 閱讀 `python_basic.md` 或 `python_advanced.md` 教材
    - 檢閱 `examples/` 資料夾的範例程式碼
    - 準備 `demo/` 示範檔案
 
 2. **課堂教學**
+
    - 依序講解教材章節
    - 使用範例程式碼示範
    - 引導學員完成 `practice/` 練習
@@ -300,11 +318,13 @@ pip install tinydb
 ### 學員使用
 
 1. **環境設定**
+
    - 依照教材第 1 章安裝 Anaconda
    - 設定 VS Code 開發環境
    - 下載教材資料夾
 
 2. **自主學習**
+
    - 閱讀教材章節
    - 執行並理解範例程式碼
    - 完成課堂練習與作業
@@ -319,17 +339,20 @@ pip install tinydb
 ### 最新更新 (2026-04-22)
 
 #### 主倉庫
+
 - ✅ 更新教材架構與範例檔案路徑
 - ✅ 修正 `python_basic.md` 所有範例檔案路徑
 - ✅ 重構 Python 進階課程單元結構（8 單元 → 7 單元）
 - ✅ 新增完整的 README.md 專案說明文件
 
 #### python_basic 子倉庫
+
 - ✅ 重構範例檔案結構與命名規範
 - ✅ 新增檔案：GUI 範例、函式設計範例、視覺化素材
 - ✅ 採用數字前綴分類系統（02-1, 02-2 等）
 
 #### python_advanced 子倉庫
+
 - ✅ 單元編號重新排序（unit02-08 → unit01-07）
 - ✅ 新增期末專案範例程式碼
 - ✅ 新增課程 README 與規格文件
